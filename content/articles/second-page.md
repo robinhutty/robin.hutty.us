@@ -1,9 +1,10 @@
 ---
-title: Documentation
-next: first-page
+title: Second Article
+type: docs
+prev: first-page
+sidebar:
+  open: true
 ---
-
-This is a demo of the theme's documentation layout.
 
 ## Hello, World!
 
@@ -16,3 +17,5 @@ func main() {
     fmt.Println("Hello, World!")
 }
 ```
+
+A simple demo page.

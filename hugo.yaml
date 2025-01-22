@@ -18,34 +18,71 @@ markup:
 
 menu:
   main:
-    - name: Docs
-      pageRef: /docs
-      weight: 1
-    - name: About
-      pageRef: /about
-      weight: 2
-    - name: Contact ↗
-      url: "https://github.com/robinhutty"
-      weight: 3
-    - name: Search
-      weight: 4
-      params:
-        type: search
-    - name: GitHub
-      weight: 5
-      url: "https://github.com/robinhutty"
-      params:
-        icon: github
+  - name: Articles
+    pageRef: /articles
+    weight: 1
+#   - name: Blog
+#     pageRef: /blog
+#     weight: 2
+  - name: About
+    pageRef: /about
+    weight: 3
+  - name: Contact ↗
+    url: "https://github.com/robinhutty"
+    weight: 4
+  - name: Search
+    weight: 5
+    params:
+      type: search
+  - name: GitHub
+    weight: 6
+    url: "https://github.com/robinhutty"
+    params:
+      icon: github
+  sidebar:
+  - name: " "
+    params:
+      type: separator
+    weight: 1
+  - name: "About"
+    pageRef: "/about"
+    weight: 2
 
 params:
   navbar:
     displayTitle: true
-    displayLogo: false
+    displayLogo: true
+    # logo:
+    #   path: images/logo.svg # path is relative to ./static
+    #   dark: images/logo-dark.svg
+    #   link: /
+    #   width: 40
+    #   height: 20
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: normal
+
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
 
   footer:
-    displayCopyright: false
-    displayPoweredBy: true
+    displayCopyright: true
+    displayPoweredBy: false
 
   editURL:
     enable: true
     base: "https://github.com/robinhutty/robin.hutty.us/edit/main/content"
+
+services:
+  googleAnalytics:
+    #ID: G-MEASUREMENT_ID
