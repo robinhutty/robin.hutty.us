@@ -1,14 +1,17 @@
-# Hugo configuration file
+# Hugo configuration file, using YAML
 title: Robin Hutty
 
 # import hextra as module
 module:
   imports:
+  - path: github.com/divinerites/plausible-hugo
   - path: github.com/imfing/hextra
 
 markup:
   # allow raw html
   goldmark:
+    extensions:
+      footnote: true
     renderer:
       unsafe: true
 
@@ -21,22 +24,25 @@ menu:
   - name: Articles
     pageRef: /articles
     weight: 1
-#   - name: Blog
-#     pageRef: /blog
-#     weight: 2
+  - name: Blog
+    pageRef: /blog
+    weight: 2
+  - name: Glossary
+    pageRef: /glossary
+    weight: 3
   - name: About
     pageRef: /about
-    weight: 3
+    weight: 4
   - name: Contact ↗
     url: "https://github.com/robinhutty"
-    weight: 4
-  - name: Search
     weight: 5
+  - name: Search
+    weight: 6
     params:
       type: search
   - name: GitHub
-    weight: 6
-    url: "https://github.com/robinhutty"
+    weight: 7
+    url: "https://github.com/robinhutty/robin.hutty.us"
     params:
       icon: github
   sidebar:
@@ -44,28 +50,42 @@ menu:
     params:
       type: separator
     weight: 1
-  - name: "About"
-    pageRef: "/about"
-    weight: 2
+  # - name: "About"
+  #   pageRef: "/about"
+  #   weight: 2
 
 params:
+  # Display the last modification date, TODO: correctly formats an incorrect date
+  displayUpdatedDate: false
+  # https://gohugo.io/functions/time/format/
+  #dateFormat: ":date_long"
+
   navbar:
     displayTitle: true
     displayLogo: true
+    # full (100%), wide (90rem), normal (1280px)
+    width: normal
     # logo:
     #   path: images/logo.svg # path is relative to ./static
     #   dark: images/logo-dark.svg
     #   link: /
     #   width: 40
     #   height: 20
+
   page:
     # full (100%), wide (90rem), normal (1280px)
     width: normal
 
+  footer:
+    displayCopyright: true
+    displayPoweredBy: false
+    # full (100%), wide (90rem), normal (1280px)
+    width: normal
+
   search:
+    # https://imfing.github.io/hextra/docs/guide/configuration/#search-index
     enable: true
     type: flexsearch
-
     flexsearch:
       # index page by: content | summary | heading | title
       index: content
@@ -74,10 +94,21 @@ params:
     # light | dark | system
     default: system
     displayToggle: true
+    plausible-hugo:
 
-  footer:
-    displayCopyright: true
-    displayPoweredBy: false
+  plausible:
+    enable: false  # Whether to enable plausible tracking
+    domain: "robin.hutty.us"  # Plausible "domain" name/id in your dashboard
+    outbound_link: true
+    file_downloads: true
+    debug: false
+    gitstar: false
+
+  comments:
+    # https://imfing.github.io/hextra/docs/advanced/comments/
+    # https://giscus.app/
+    enable: false
+    type: giscus
 
   editURL:
     enable: true

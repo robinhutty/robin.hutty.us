@@ -2,7 +2,5 @@
 title: Articles
 cascade:
   type: docs
-next: first-page
+next: this-site
 ---
-
-This is a demo of the theme's documentation layout.
