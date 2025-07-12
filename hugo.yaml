@@ -33,15 +33,18 @@ menu:
   - name: About
     pageRef: /about
     weight: 4
+  - name: Bio
+    pageRef: /bio
+    weight: 5
   - name: Contact ↗
     url: "https://github.com/robinhutty"
-    weight: 5
-  - name: Search
     weight: 6
+  - name: Search
+    weight: 7
     params:
       type: search
   - name: GitHub
-    weight: 7
+    weight: 8
     url: "https://github.com/robinhutty/robin.hutty.us"
     params:
       icon: github

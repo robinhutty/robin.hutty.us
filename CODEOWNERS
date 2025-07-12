@@ -1,0 +1,7 @@
+# See [GitHub CODEOWNER syntax docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners#codeowners-syntax)
+# See [GitLab CODEOWNER syntax docs](https://docs.gitlab.com/user/project/codeowners/reference/)
+
+# Rules defined later in this file take precedence over earlier rules.
+
+# A default codeowner
+* @robinhutty
