@@ -135,16 +135,15 @@ Given that Hugo is a Static Site Generator, it outputs plain text files (HTML, C
 * [Cloudflare Pages](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/)
 * or your own tiny server such as a Raspberry Pi, smartphone or other low power computing device.
 
-## Next?
+## Next: Wouldn't it be nice if ...?
 
 * Additional Goldmark extensions
   - https://github.com/abhinav/goldmark-frontmatter
   * diagrams (via [D2](https://github.com/FurqanSoftware/goldmark-d2) or [Mermaid](https://github.com/abhinav/goldmark-mermaid))
   - [Table of Contents](https://github.com/abhinav/goldmark-toc)
 * Web Analytics via [Plausible Analytics](plausible.io), a simple, open-source, lightweight and privacy-friendly web analytics, using the [plausible-hugo](https://github.com/divinerites/plausible-hugo) integration
-* Fediverse/IPFS/etc. publication?
+* Fediverse/etc. publication?
 * Comments? Perhaps via [giscus](giscus.app)?
-
 
 ## Testing
 
