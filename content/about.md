@@ -1,5 +1,6 @@
 ---
 title: About
+date: 2025-01-25
 type: about
 ---
 
@@ -24,19 +25,21 @@ Now I admit that's a bit vague, but I hope it gives some useful context to those
 
 My main[^extra] purpose for creating this content is "Writing to Learn"; writing helps me to think [more] clearly, to better understand the material and my own opinions/thought process. Therefore, the principal target audiences are: _me_ and _future me_. Of course, I'd like to think that others might get benefit from this effort as well. But I try to write for my audience.
 
-[^extra]: Additional benefits (to me) include: a single process for publishing my writing and a canonical destination/location so I can more easily rediscover information/thoughts I've sort of forgotten about: "oh I know I worked with/wrote about _foo_ before, where did I put that?".
+[^extra]: Additional benefits (to me) include: a single process for publishing my writing and a canonical destination/location so I can more easily rediscover information/thoughts I've sort of forgotten about. So "oh I know I have written about _foo_ before, where did I put that?" has exactly one answer.
 
 ## Other notes
 
 1. In most of the (tech) material here, I generally presume:
 
-    - some exposure to linux/unix-like systems
-    - basic terminal/cli skills
-    - basic text editor skills
-    - basic familiarity with Version Control Systems(VCS) especially `git` and "code forge" software such as github, gitlab, forgejo, etc.
-    - some exposure to networking concepts, especially HTTP and DNS
+    - Some exposure to networking protocols and concepts, especially HTTP and DNS
+    - Some exposure to linux/unix-like systems
+    - Basic terminal/cli skills
+    - Basic text editor skills
+    - Basic familiarity with Version Control Systems(VCS) especially `git` and "code forge" software such as github, gitlab, forgejo, etc.
 
-2. When you see capitalized forms such as "SHOULD", "SHOULD NOT", etc., I'm using terminology from [RFC2219](https://datatracker.ietf.org/doc/html/rfc2119) which establishes language around requirement levels.
+2. When you see capitalized forms such as "SHOULD", "SHOULD NOT", etc., I'm using the approach of [RFC2219][1] which establishes language conventions to indicate levels of "required-ness".
+
+[1]: https://datatracker.ietf.org/doc/html/rfc2119
 
 3. In sections that represent cli input/output or code snippets:
 
@@ -45,11 +48,14 @@ My main[^extra] purpose for creating this content is "Writing to Learn"; writing
 
 ## Other Resources I like
 
-* [Beej's Guide to Networking Concepts](https://beej.us/guide/bgnet0/)[^beej_sockets]
+I mention some as options to increase background/context, some as reference/tutorial.
+
+* [Beej's Guide to Networking Concepts](https://beej.us/guide/bgnet0/)[^bgnet]
 * [Mozilla's overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
-[^beej_sockets]: Not to be confused with [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/) , which is about socket _programming_
-  <!-- TODO: list some intro to linux/cli tutorials on the web -->
+<!-- TODO: list some intro to linux/cli tutorials on the web -->
+
+[^bgnet]: Not to be confused with the venerable but also still awesome [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/), which aims to be a practical tutorial for programming using (TCP/IP) network sockets in C.
 
 ## About this site
 
@@ -61,3 +67,22 @@ Here is a list of some software, written by not-me, that I've used to make/publi
 * [GitHub Actions](https://docs.github.com/en/actions)
 
 More details available at [How this Site was Made](../articles/this-site)
+
+### Appearance
+
+As someone aware of my weak understanding of how to design beautifully (despite the common "I know it when I see it"[^stewart]), I hereby offer apology if this site does not Look Good; but only mildly because it Looks Good Enough for me.
+
+My fontstack choices are simple:
+
+* Serif: [Vollkorn][V], [Linux Libertine][LL]. While both are free/libre, using the [SIL Open Font License][OFL], I generally prefer the feel of Vollkorn, but Linux Libertine is more comprehensive as well as more prevalent. The CSS falls back to other serif typefaces.
+* Sans-Serif:
+* Header/Decorative: TBD?
+
+[V]: http://vollkorn-typeface.com
+[LL]: https://github.com/libertine-fonts/libertine
+[OFL]: https://openfontlicense.org
+
+[^font]: Typeface (~= "Font Family"): "A set of typographic/design features creating a unified style for text". Font: "a particular variant of a typeface - typically specifying size, weight, but also other variations such as italic, condensed, etc.".
+
+
+[^stewart]: As United States Supreme Court Justice Potter Stewart describing his threshold test for obscenity: https://en.wikipedia.org/wiki/I_know_it_when_I_see_it

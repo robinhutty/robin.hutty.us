@@ -1,7 +1,11 @@
 ---
 title: Charging Li-ion powerbanks
 date: 2025-05-04
+modified: 2025-09-08T13:10:50
+categories:
+tags: hardware
 type: blog
+draft: false
 ---
 
 Since my region has had problematic power outages recently, I'm thinking about rechargeable batteries and powerbanks;
@@ -20,6 +24,12 @@ So how about putting the less-frequently used devices to be charged on a schedul
 
 Would that extend the life of these batteries? Without the disadvantage of having insufficiently charged devices when I want to use them?
 
+## Laptops/Phones
+
+* Control and limit battery charging on Apple Silicon MacBooks with [batt](https://github.com/charlie0129/batt)
+* TODO:
+
 ## See Also/References
 
 * [Wikipedia on Lithium-ion batteries](https://en.wikipedia.org/wiki/Lithium-ion_battery)
+* https://batteryuniversity.com/article/bu-808-how-to-prolong-lithium-based-batteries

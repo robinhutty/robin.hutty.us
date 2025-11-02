@@ -1,0 +1,12 @@
+:root {
+  /* Want to change colours? */
+  /* --primary-hue: 100deg; */
+  /* --primary-saturation: 90%; */
+  /* --primary-lightness: 50%; */
+
+  /* Want to change typeface/font? Don't forget to load them with a stylsheet link in <head>, probably in ../../layouts/_partials/custom/head-end-html */
+  font-family: Vollkorn, "LinuxLibertine O", "Linux Libertine", "Hoefler Text", Georgia, Times, serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

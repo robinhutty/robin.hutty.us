@@ -1,5 +1,9 @@
 ---
 title: "MacOS: Configuration"
+date: 2025-07-12
+modified: 2025-09-11T09:56:48
+categories: productivity
+tags: macos
 type: docs
 draft: false
 ---

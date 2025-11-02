@@ -1,5 +1,9 @@
 ---
 title: How this Site was Made
+date: 2025-01-22
+modified: 2025-09-27T09:58:36
+categories: web
+tags: writing, publishing
 type: docs
 draft: false
 prev: /articles
@@ -19,9 +23,8 @@ This assumes you have:
 
 ```shell {linenos=table,linenostart=1}
 export DEST_DOMAIN=<YOUR_DOMAIN_HERE>
-brew install mise
+brew install hugo
 cd ${DEST_DOMAIN}
-mise use hugo[@<some version>]
 
 gh repo create ${DEST_DOMAIN} \
   --public \
@@ -29,9 +32,9 @@ gh repo create ${DEST_DOMAIN} \
   --description "Sources for ${DEST_DOMAIN}"
 ```
 
-## Create the website
+# Create the website
 
-There are several options to create basic scaffolding for a Hugo website, such as cloning or otherwise copy from a Hugo Theme repository, such as the template repository of the [Hextra Theme]() or using the Hugo CLI.
+There are several options to create basic scaffolding for a Hugo website, such as cloning or otherwise copy from a Hugo Theme repository, such as the template repository of the [Hextra Theme](https://github.com/imfing/hextra-starter-template) or using the Hugo CLI.
 
 ### Hugo CLI
 
@@ -41,9 +44,7 @@ cd SITENAME
 hugo mod init github.com/USERNAME/SITENAME
 ```
 
-#### Add a theme
-
-
+### Add a theme
 
 * For Beautiful Hugo: use `halogenica/beautifulhugo` as the repository
 * For Hextra: use `imfing/hextra` as the repository
@@ -58,6 +59,30 @@ module:
   imports:
     - path: github.com/imfing/hextra
 ```
+
+### Customize the Hextra theme
+
+Hextra offers some [configurability](https://imfing.github.io/hextra/docs/guide/configuration/); this subsection shows a few ways in which I have used the [Hextra theme's customization functionality](https://imfing.github.io/hextra/docs/advanced/customization/) to change the appearance[^pretty] of the site.
+
+* Fetch a new web font[^font] with some custom HTML in `layouts/_partials/custom/head-end.html`:
+    ```html
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    ```
+
+* Use it (everywhere) with some custom CSS in `resources/assets/css/custom.css`:
+    ```css
+    :root {
+      font-family: Vollkorn, "LinuxLibertine O", "Hoefler Text", Georgia, Times, serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+    ```
+
+[^pretty]: As someone firmly convinced that I do not understand how to make anything Look Good, although I often "know it when I see it", I hereby offer apology if this site does not. But only mildly and in this footnote because it Looks Good Enough for me.
+[^font]: Typeface (~= "Font Family"): "A set of typographic/design features creating a unified style for text". Font: "a particular variant of a typeface - typically specifying size, weight, but also other variations such as italic, condensed, etc.".
 
 ### Writing New Posts
 
@@ -92,23 +117,23 @@ sidebar:
 ---
 ```
 
-### Markdown Tips
+#### Markdown Tips
 
 This site supports CommonMark as a "standard" Markdown:
 
-- **Bold** text uses `**asterisks**`
-- *Italic* text uses `*asterisks*`
+- **Bold** text uses `**doubled asterisks**`
+- *Italic* text uses `*single asterisks*`
 - Links use `[text](url)`
 - Images use `![alt text](image-url)`
 - See some [markdown docs](https://commonmark.org/help/) for more help
 - Footnotes
-  ```markdown
-  Here is some text with a footnote.[^1]
+    ```markdown
+    Here is some text with a footnote.[^1]
 
-  [^1]: And here's the footnote text.
-  ```
+    [^1]: And here's the footnote text.
+    ```
 
-#### Deeper details
+##### Deeper details
 
 By default, and for this site, Hugo uses [Goldmark](https://github.com/yuin/goldmark/) to render Markdown. This means:
 
@@ -142,8 +167,9 @@ Given that Hugo is a Static Site Generator, it outputs plain text files (HTML, C
   * diagrams (via [D2](https://github.com/FurqanSoftware/goldmark-d2) or [Mermaid](https://github.com/abhinav/goldmark-mermaid))
   - [Table of Contents](https://github.com/abhinav/goldmark-toc)
 * Web Analytics via [Plausible Analytics](plausible.io), a simple, open-source, lightweight and privacy-friendly web analytics, using the [plausible-hugo](https://github.com/divinerites/plausible-hugo) integration
-* Fediverse/etc. publication?
+* local, static search (i.e. _not_ using SaaS such as Google/Bing/etc.) Perhaps via [pagefind](https://pagefind.app/)?
 * Comments? Perhaps via [giscus](giscus.app)?
+* Fediverse/etc. publication?
 
 ## Testing
 

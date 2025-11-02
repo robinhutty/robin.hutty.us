@@ -1,8 +1,10 @@
 ---
 title: Using topic branches in git to ease integration pain
+date: 2025-04-01
+categories: productivity
+tags: Tools, VCS
 type: docs
 draft: false
-categories: Tools, VCS
 ---
 
 If you want to participate in most public/FOSS projects using git,

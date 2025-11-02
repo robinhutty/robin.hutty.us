@@ -1,12 +1,16 @@
 ---
 title: On Code Review Semantics
+date: 2025-03-12
+modified: 2025-09-08T07:52:22
 type: docs
-draft: false
+draft: true
+categories: engineering
+tags: review, vcs
 ---
 
 Nowadays, it seems that Software Engineering, as a field of practice, has come to a consensus that Code Review is generally A Good Idea[^objection] - when a changeset is proposed as a Merge Request[^MR], someone/something SHOULD review before it gets merged. However, the semantics of code review have nuance that is context-sensitive - dependent on such situational aspects as: the kind of organization/team and the individuals, the overall purpose of the codebase, the purpose of the changeset, etc.
 
-As is so common, "shared expectations" are critical to successful communication, so I've gathered some of my thoughts about the semantics of Code Review.
+As is so common, Code Review done badly can be worse for the overall success of a project that no code review, and "shared expectations" are critical to successful communication, so I've gathered some of my thoughts about the semantics of Code Review.
 
 ## Semantics
 
@@ -28,6 +32,39 @@ What does/should it mean to add a "LGTM"[^lgtm] to an MR? Well, that depends on 
 
 * Many languages/formats/etc. have linting tools that can/should be used to help support a project's coding guidelines.
 * LLM-based tools: with the rise of LLM-based AI, it's becoming commonplace to have such bots comment on MRs.
+
+## Lenses for your "additional set of eyes"
+
+Code Review is (should be) a regular part of a developer's activity, so while we might think it's easy, most developers are likely to benefit from a checklist approach to help keep the process effective and avoid slipping into mindless, rote behaviour. When reviewing perhaps consider some of the following perspectives:
+
+#### Testing
+
+Overall, does the changeset leave the project's testing/testability no worse than it was before?
+  - Does the changeset contain appropriate updates to existing tests?
+  - Is new code written to facilitate testing?
+  - Are there tests for new code? (including some or all of: unit, end-to-end, performance)
+  - Are the new tests reasonable/valuable and not just gaming code coverage stats?
+
+#### Release Engineering
+
+- Does this changeset add appropriate entries to/for the CHANGELOG such as to indicate how the SemVer should be bumped?
+
+#### Security
+
+- Does the changeset make the overall security posture no worse?
+
+#### Documentation
+
+- Developer-facing: Comments in the code
+- User-facing: does the changeset include updates to documentation in all diataxis[^diataxis] categories?
+
+[^diataxis]: A framework for documentation that categorizes docs by purpose/audience: how-to, explanatory, tutorial, reference. [Discussion here](https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework)
+
+#### FinOps
+
+If the project has "spend", such as for IaaS/SaaS:
+
+- Does the changeset make the bang-for-the-buck no worse?
 
 [^codeowners]: See documentation for [GitHub CODEOWNERS](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) and/or [GitLab CODEOWNERS](https://docs.gitlab.com/user/project/codeowners/)
 
