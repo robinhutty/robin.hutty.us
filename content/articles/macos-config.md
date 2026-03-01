@@ -1,5 +1,9 @@
 ---
 title: "MacOS: Configuration"
+date: 2025-07-12
+modified: 2026-02-08T18:42:59
+categories: productivity
+tags: macos
 type: docs
 draft: false
 ---
@@ -21,7 +25,7 @@ What is this?
 ### SSH
 
 * Open "System Settings", select "General > Sharing". Under "Advanced", enable "Remote Login".
-* From another machine use 'ssh-copy-id' or otherwise add your SSH Public Key.
+* From another machine use 'ssh-copy-id' or otherwise add an SSH Public Key to `~/.ssh/authorized_keys`.
 * Consider distributing the SSH Host Key to other machines so that I can use `StrictHostKeyChecking=true`.
 
 ### Homebrew
@@ -71,7 +75,7 @@ Add the new machine to (Ansible) inventory/group(s) and run a Playbook that appl
 [SIP]: https://support.apple.com/en-us/HT204899
 
 
-[^automation]: At the moment, I'm using [Ansible](https://docs.ansible.com/) for this kind of automation; progress can be see at TODO (VCS repo link).
+[^automation]: At the moment, I'm using [Ansible](https://docs.ansible.com/) for this kind of automation; I've written [about this](../ansible/) and the code can be see at https://github.com/robinhutty/ansible-collection
 [^sequoia]: This is for Mac OS Sequoia (15.x), although much of it should be applicable to (a few?) older and newer releases.
 [^bigsur]: This behaviour started with Mac OSX Big Sur (11.x).
 [^capitan]: This behaviour started with Mac OSX El Capitan (10.11.x).

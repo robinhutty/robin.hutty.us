@@ -10,13 +10,14 @@ For most of my self-hosted services, I have little need for Serious Uptime, so I
 
 But there are some few services that are important enough to me that I'd like them to be on hardware that is maintained by someone else, with redundant power/networking. Fortunately, for those latter cases, the compute/network/storage needs are low, and nowadays it can often be very inexpensive[^iaas-costs].
 
-## What do I want to run in Public Cloud/IaaS?
+## What do I want to run using Public Cloud/IaaS/PaaS?
 
 Not Much[^mx]
 
 * Authoritative DNS for a small number of Zones that do not see heavy traffic.
 * Dynamic DNS service so that in the (unusual) event that my home IP address changes, services at home can still be reached by name.
-* Off-site backup for some personal VCS repositories.
+* Off-site backup for some personal VCS repositories (although I have this covered by reciprocal arrangements with other individuals as well).
+* HTTP: a few simple static sites/files for which I do not need logs (yet).
 
 ## How?
 

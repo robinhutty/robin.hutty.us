@@ -1,5 +1,8 @@
 # Hugo configuration file, using YAML
 title: Robin Hutty
+author:
+  name: Robin Hutty
+  email: robin@allgoodbits.org
 
 # import hextra as module
 module:
@@ -27,9 +30,6 @@ menu:
   - name: Blog
     pageRef: /blog
     weight: 2
-  - name: Glossary
-    pageRef: /glossary
-    weight: 3
   - name: About
     pageRef: /about
     weight: 4
@@ -59,9 +59,10 @@ menu:
 
 params:
   # Display the last modification date, TODO: correctly formats an incorrect date
-  displayUpdatedDate: false
+  displayUpdatedDate: true
+  displayUpdatedAuthor: false
   # https://gohugo.io/functions/time/format/
-  #dateFormat: ":date_long"
+  dateFormat: ":date_medium"
 
   navbar:
     displayTitle: true
@@ -77,7 +78,7 @@ params:
 
   page:
     # full (100%), wide (90rem), normal (1280px)
-    width: normal
+    width: wide
 
   footer:
     displayCopyright: true
@@ -99,6 +100,9 @@ params:
     displayToggle: true
     plausible-hugo:
 
+  # Add an arrow icon to external links when rendering links from Markdown.
+  externalLinkDecoration: true
+
   plausible:
     enable: false  # Whether to enable plausible tracking
     domain: "robin.hutty.us"  # Plausible "domain" name/id in your dashboard
@@ -117,6 +121,27 @@ params:
     enable: true
     base: "https://github.com/robinhutty/robin.hutty.us/edit/main/content"
 
-services:
-  googleAnalytics:
-    #ID: G-MEASUREMENT_ID
+  analytics:
+    # matomo:
+    #   # https://matomo.org/
+    #   serverURL: "https://example.com"
+    #   websiteID: "some-UUID like 94db1cb1-74f4-4a40-ad6c-962362670409"
+    # umami:
+    #   # https://umami.is/docs/
+    #   serverURL: "https://example.com"
+    #   websiteID: "some-UUID like 94db1cb1-74f4-4a40-ad6c-962362670409"
+    ##   scriptName: "umami.js" # optional (default: umami.js)
+    ##   https://umami.is/docs/tracker-configuration#data-host-url
+    ##   hostURL: "http://stats.example.org" # optional
+    ##   https://umami.is/docs/tracker-configuration#data-auto-track
+    ##   autoTrack: "false" # optional
+    ##   https://umami.is/docs/tracker-configuration#data-tag
+    ##   domains: "example.net,example.org" # optional
+    ##   https://umami.is/docs/tracker-configuration#data-exclude-search
+    ##   tag: "umami-eu" # optional
+    ##   https://umami.is/docs/tracker-configuration#data-exclude-hash
+    ##   excludeSearch: "true" # optional
+    ##   https://umami.is/docs/tracker-configuration#data-do-not-track
+    ##   excludeHash: "true" # optional
+    ##   https://umami.is/docs/tracker-configuration#data-domains
+    ##   doNotTrack: "true" # optional

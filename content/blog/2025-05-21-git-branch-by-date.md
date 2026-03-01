@@ -4,7 +4,7 @@ date: 2025-05-21
 type: blog
 ---
 
-One of those tiny conveniences that I've meant to discover long ago, but finally got to.
+One of those tiny conveniences that I've meant to dig into long ago, but only recently found.
 
 My work (and my fun), both code and prose, is almost entirely in the git VCS and most of my WorkWork is in git repositories that are shared with others.
 
