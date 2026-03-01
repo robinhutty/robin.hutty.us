@@ -1,11 +1,11 @@
 ---
 title: "Tips: Shell"
 date: 2025-09-19
-modified: 2026-02-11T16:39:26
+modified: 2026-03-01T18:42:28
 categories: productivity
 tags: programming, tips, shell
 type: docs
-draft: true
+draft: false
 ---
 
 ## Parallelization

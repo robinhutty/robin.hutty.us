@@ -1,11 +1,11 @@
 ---
 title: "Tips: OpenTofu/Terraform"
 date: 2025-11-21
-modified: 2026-02-28T16:36:40
+modified: 2026-03-01T18:42:15
 categories: IaC
 tags: hcl, tf, tips
 type: docs
-draft: true
+draft: false
 ---
 
 ## Version Manager

@@ -1,11 +1,11 @@
 ---
 title: "Tips: Kubernetes"
 date: 2025-09-08
-modified: 2026-02-11T16:38:49
+modified: 2026-03-01T18:42:51
 categories: IaaS
 tags: k8s
 type: docs
-draft: true
+draft: false
 ---
 
 ## Try It and See

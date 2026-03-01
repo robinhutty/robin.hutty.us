@@ -1,9 +1,9 @@
 ---
 title: "On Code Review: Practice and Semantics"
 date: 2025-03-12
-modified: 2026-03-01T16:20:51
+modified: 2026-03-01T18:44:06
 type: docs
-draft: true
+draft: false
 categories: engineering
 tags: review, vcs
 ---

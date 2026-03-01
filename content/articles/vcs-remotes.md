@@ -1,11 +1,11 @@
 ---
 title: "VCS: How I use multiple git remotes for writing and publishing"
 date: 2025-11-25
-modified: 2026-03-01T18:27:51
+modified: 2026-03-01T18:41:54
 type: docs
 categories: devx, VCS
 tags: vcs, devx
-draft: true
+draft: false
 ---
 
 ### Intention: Or how do I want my git remote usage to work?

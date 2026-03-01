@@ -1,11 +1,11 @@
 ---
 title: "VCS: How I use multiple git identities and forges"
 date: 2025-11-25
-modified: 2026-02-13T17:54:40
+modified: 2026-03-01T18:42:03
 type: docs
 categories: devx, VCS
 tags: vcs, devx
-draft: true
+draft: false
 ---
 
 ## Multiple identities (including at a single software forge)

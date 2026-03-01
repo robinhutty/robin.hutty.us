@@ -1,11 +1,11 @@
 ---
 title: Reverse Proxying with Caddy
 date: 2025-10-15
-modified: 2026-02-13T15:53:57
+modified: 2026-03-01T18:41:22
 categories: services
 tags: http,oci,container,proxy,caddy
 type: docs
-draft: true
+draft: false
 ---
 
 I use [Caddy][1] as a reverse proxy in front of several applications that I run for personal/fam usage. This doc shows some of how I have it set up.

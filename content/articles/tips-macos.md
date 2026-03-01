@@ -1,11 +1,11 @@
 ---
 title: "Tips: macos"
 date: 2026-02-05
-modified: 2026-02-11T17:40:33
+modified: 2026-03-01T18:42:39
 categories: productivity
 tags: macos, tips
 type: docs
-draft: true
+draft: false
 ---
 
 I've been using OSX/macos as a daily driver workstation/notebook device[^mactop] for many years, originally because it was a unixlike OS that worked well [enough] on good [enough] hardware with good support for that hardware[^leave].

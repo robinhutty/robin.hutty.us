@@ -1,11 +1,11 @@
 ---
 title: "Tips: jq"
 date: 2025-09-22
-modified: 2026-02-11T16:38:30
+modified: 2026-03-01T18:43:00
 categories: productivity
 tags: cli, jq, tips
 type: docs
-draft: true
+draft: false
 sidebar:
   open: true
 ---
