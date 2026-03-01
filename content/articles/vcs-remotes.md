@@ -1,7 +1,7 @@
 ---
 title: "VCS: How I use multiple git remotes for writing and publishing"
 date: 2025-11-25
-modified: 2026-02-28T16:21:00
+modified: 2026-03-01T18:27:51
 type: docs
 categories: devx, VCS
 tags: vcs, devx
@@ -56,7 +56,7 @@ Which allows me to:
 |-------------------------------|------------------------------------------------------|
 | `git push -u origin -a`       | Push _all_ branches to the remote that is _my_ forge |
 | `git push -u gh-draft draft`  | Push the `draft` branch to the remote that is the private repository at github.com |
-| `git push -u gh-draft -a`     | Push all branches to the remote that is the private repository at github.com |
+| `git push -u gh-draft`        | Push all branches to the remote that is the private repository at github.com |
 | `git push -u gh-publish main` | Push the `main` branch to the remote that is the public repository at github.com (which will trigger a publication pipeline)|
 
 Combined with a [fragment of SSH configuration](../vcs-identities/#sshconfig) and some [git configuration](../vcs-identities/), the overall result:
