@@ -1,7 +1,7 @@
 ---
 title: How this Site was Made
 date: 2025-01-22
-modified: 2025-09-27T09:58:36
+modified: 2026-03-01T18:13:35
 categories: web
 tags: writing, publishing
 type: docs
@@ -109,6 +109,8 @@ For non-blog content, create a new file in the `articles` directory:
 ```yaml
 ---
 title: "About"
+date: YYYY-MM-DD
+modified:
 type: docs
 # prev:
 # next:
@@ -159,6 +161,10 @@ Given that Hugo is a Static Site Generator, it outputs plain text files (HTML, C
 * [GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 * [Cloudflare Pages](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/)
 * or your own tiny server such as a Raspberry Pi, smartphone or other low power computing device.
+
+Currently, this site uses GitHub Actions and GitHub Pages:
+
+* [GitHub Actions Workflows](https://github.com/robinhutty/robin.hutty.us/actions)
 
 ## Next: Wouldn't it be nice if ...?
 
