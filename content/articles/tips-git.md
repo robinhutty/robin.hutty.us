@@ -1,7 +1,7 @@
 ---
 title: "Tips: git tips and conveniences"
 date: 2025-04-03
-modified: 2026-02-20T12:13:30
+modified: 2026-03-14T09:45:43
 type: docs
 categories: VCS
 tags: devx, tips, productivity, git
@@ -12,13 +12,24 @@ Why am I bothering to write about Version Control Systems(VCS) when so much mate
 
 [^usual]: plus [my usual reasons](../../about/#about-this-sites-content).
 
-### Filtering git log
+### Digging
+
+I spent much more time reading code than I do writing it[^cognitive_burden].
+
+[^cognitive_burden]: This is already proving to be even more true in the new world of AI/LLM-assisted development. It was true before - not least because of "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." - Brian Kernighan. But also because I review code written by previous-me and others.
+
+#### Filtering git log
 
 Filter the change history shown by `git log ...`:
   * by branch with `git log <branch_name>`
   * by author(`--author=...`) or committer(`--committer=...`)
   * by date (`--since=2025-04-03` or `--before=2025-09-03`)
   * by path
+
+#### Viewing changesets
+
+* `git diff COMMIT~ COMMIT` shows the difference between that COMMIT's ancestor and the COMMIT
+* See the manpage gitrevisions(7) for comprehensive details about specifying revisions and revision ranges in git commands.
 
 ### Cloning repositories incompletely
 
@@ -116,12 +127,18 @@ recent="branch --sort=-committerdate --format='%(committerdate:short) %(refname:
 
 ## Tools
 
+### Tools I use
+
 * GitHub and GitLab both provide their own CLI tools for interacting with their services: [gh](https://github.com/cli/cli) and [glab](https://gitlab.com/gitlab-org/cli)
 * [gcli](https://herrhotzenplotz.de/gcli/) is a CLI client to interact with multiple software forges such as forgejo, github, gitlab.
-* [diffnav](https://github.com/dlvhdr/diffnav):  Git diff pager based on delta but with a file tree.
-* [difi](https://github.com/oug-t/difi): another aid for reviewing.
-* [ggc](https://github.com/bmf-san/ggc) provides a more interactive interface that `git(1)`.
+* [difi](https://github.com/oug-t/difi): aid for reviewing.
+* [ggc](https://github.com/bmf-san/ggc) provides a more interactive interface than `git(1)`.
 
+### Tools I'm exploring
+
+* [garden](https://github.com/garden-rs/garden)
+* [sem-cli](https://github.com/Ataraxy-Labs/sem)
+* [weave](https://github.com/Ataraxy-Labs/weave)
 
 ## See Also
 
