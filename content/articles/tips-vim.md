@@ -1,7 +1,7 @@
 ---
 title: "Tips: Vim"
 date: 2025-09-06
-modified: 2026-02-11T16:40:23
+modified: 2026-03-21T18:51:28
 categories: productivity
 tags: vim, editor, tips
 type: docs
@@ -61,6 +61,10 @@ autocmd BufWritePre,FileWritePre *.adoc   ks|call DocsLastMod()|'s
 ```
 
 There is some obvious room for improvement, especially DRYing it up, but this works and is clear to me - which is good because I don't often write vimscript.
+
+## See Also
+
+* My `.vimrc` in the dotfiles repository.
 
 [^stat]: On (somewhat) modern unixlike systems, stat(1) will show details about a file. The exact set of data available will depend on the filesystem, but modification time(mtime) and "birth time" (aka "creation time") are available on at least: ext4, HFS+, NTFS, XFS, btrfs, zfs. And that covers everything I've dealt with in recent memory.
 
