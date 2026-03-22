@@ -1,7 +1,7 @@
 ---
 title: "Tips: OpenTofu/Terraform"
 date: 2025-11-21
-modified: 2026-03-01T18:42:15
+modified: 2026-03-22T13:38:01
 categories: IaC
 tags: hcl, tf, tips
 type: docs
@@ -50,7 +50,7 @@ For a detailed demonstration of how to use git as a backend for TF State, see my
 * tflint
 * https://github.com/tofuutils/pre-commit-opentofu
 
-### TF techniques
+## TF techniques
 
 ### That TF-managed Resource that is your dependency, is it Really Ready?
 
