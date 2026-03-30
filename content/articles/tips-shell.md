@@ -1,12 +1,40 @@
 ---
 title: "Tips: Shell"
 date: 2025-09-19
-modified: 2026-03-01T18:42:28
+modified: 2026-03-30T15:39:58
 categories: productivity
 tags: programming, tips, shell
 type: docs
 draft: false
 ---
+
+## Convenience functions
+
+### PATH management
+
+These came about long ago when someone asked me how to avoid `$PATH` getting (many) duplications of directories.
+
+```bash
+function prepend_once_to_path {
+    local newdirs=($@)
+	for ND in ${newdirs[@]};
+    do
+      if [[ "$(echo $PATH | grep -c $ND)" -lt 1 ]]; then
+         export PATH=$ND:$PATH
+      fi
+	done
+}
+
+function append_once_to_path {
+    local newdirs=($@)
+	for ND in ${newdirs[@]};
+    do
+      if [[ "$(echo $PATH | grep -c $ND)" -lt 1 ]]; then
+         export PATH=$PATH:$ND
+      fi
+	done
+}
+```
 
 ## Parallelization
 

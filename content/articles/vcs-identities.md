@@ -1,7 +1,7 @@
 ---
 title: "VCS: How I use multiple git identities and forges"
 date: 2025-11-25
-modified: 2026-03-01T18:42:03
+modified: 2026-03-21T22:03:04
 type: docs
 categories: devx, VCS
 tags: vcs, devx
@@ -90,6 +90,8 @@ $ git clone git@github.com-org1.com:org1/repo1.git ~/orgs/org1/repo1
 TODO: coping with multiple repositories: manyrepos, gickup, etc.
 
 TODO: See Also/hat-tip to https://flori.dev/reads/git-signing-and-multiple-identities/ and https://medium.com/@leroyleowdev/one-machine-many-identities-adding-effortlessly-switch-between-multiple-git-profiles-fd56a20bc181 and https://dev.to/victorbruce/managing-multiple-git-identities-a-seamless-workflow-for-personal-and-work-accounts-1kce
+
+TODO: about ssh-signing: https://codon.org.uk/~mjg59/blog/p/ssh-certificates-and-git-signing/
 
 [^forge]: a [software forge](https://en.wikipedia.org/wiki/Forge_(software)), a collaboration service/platform for software development.
 [^ssh]: See my [SSH tips article](../tips-ssh/)
