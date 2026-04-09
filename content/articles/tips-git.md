@@ -1,7 +1,7 @@
 ---
 title: "Tips: git tips and conveniences"
 date: 2025-04-03
-modified: 2026-03-14T09:45:43
+modified: 2026-04-09T13:31:27
 type: docs
 categories: VCS
 tags: devx, tips, productivity, git
@@ -18,13 +18,16 @@ I spent much more time reading code than I do writing it[^cognitive_burden].
 
 [^cognitive_burden]: This is already proving to be even more true in the new world of AI/LLM-assisted development. It was true before - not least because of "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." - Brian Kernighan. But also because I review code written by previous-me and others.
 
-#### Filtering git log
+#### Examining the git log
 
-Filter the change history shown by `git log ...`:
+- Filter the change history shown by `git log ...`:
   * by branch with `git log <branch_name>`
   * by author(`--author=...`) or committer(`--committer=...`)
-  * by date (`--since=2025-04-03` or `--before=2025-09-03`)
+  * by date (`--since-as-filter=2025-04-03` or `--before=2025-09-03`)
   * by path
+
+- Who has been active in this codebase?
+  * `git shortlog --summary --numbererd --no-merges` (takes many of the same filtering options above)
 
 #### Viewing changesets
 
